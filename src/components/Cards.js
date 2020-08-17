@@ -1,13 +1,11 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import React, { useState } from 'react';
+import { SubmitButton, EditButton } from './Buttons';
+import { EditContactForm } from './Form';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,46 +33,77 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MediaControlCard() {
-  const classes = useStyles();
-  const theme = useTheme();
+export const ShowDetails = ({ data }) => {
+  const { id, fullName, initials, firstName, surName, phone, gender } = data;
+  console.log(data);
 
   return (
+    <Grid container direction='column' spacing={3}>
+      <Grid item xs={10}>
+        <TextField
+          value={firstName}
+          id='fname'
+          label='First Name'
+          variant='outlined'
+          size='small'
+          InputProps={{
+            readOnly: true,
+          }}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={10}>
+        <TextField
+          value={surName}
+          id='sname'
+          label='Surname'
+          variant='outlined'
+          size='small'
+          InputProps={{
+            readOnly: true,
+          }}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={10}>
+        <TextField
+          value={phone}
+          id='phone'
+          label='Phone Number'
+          variant='outlined'
+          size='small'
+          InputProps={{
+            readOnly: true,
+          }}
+          fullWidth
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <EditButton />
+      </Grid>
+    </Grid>
+  );
+};
+
+export function ContactCard({ data }) {
+  const classes = useStyles();
+  const [isEditing, setIsEditing] = useState(false);
+  console.log(data);
+
+  const cardContent = isEditing ? (
+    <EditContactForm data={data} />
+  ) : (
+    <ShowDetails data={data} />
+  );
+  return (
     <Card className={classes.root}>
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component='h5' variant='h5'>
-            Live From Space
-          </Typography>
-          <Typography variant='subtitle1' color='textSecondary'>
-            Mac Miller
-          </Typography>
-        </CardContent>
-        <div className={classes.controls}>
-          <IconButton aria-label='previous'>
-            {theme.direction === 'rtl' ? (
-              <SkipNextIcon />
-            ) : (
-              <SkipPreviousIcon />
-            )}
-          </IconButton>
-          <IconButton aria-label='play/pause'>
-            <PlayArrowIcon className={classes.playIcon} />
-          </IconButton>
-          <IconButton aria-label='next'>
-            {theme.direction === 'rtl' ? (
-              <SkipPreviousIcon />
-            ) : (
-              <SkipNextIcon />
-            )}
-          </IconButton>
-        </div>
-      </div>
-      <CardMedia
+      <CardContent className={classes.content}>{cardContent}</CardContent>
+      {/* <CardMedia
         className={classes.cover}
         image='/static/images/cards/live-from-space.jpg'
         title='Live from space album cover'
-      />
+      /> */}
     </Card>
   );
 }

@@ -10,6 +10,7 @@ export const ContactsProvider = (props) => {
     contacts: [
       {
         id: 1,
+        fullName: 'Hunter Helmsley',
         initials: 'HH',
         firstName: 'Hunter',
         surName: 'Helmsley',
@@ -18,6 +19,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 2,
+        fullName: 'Jolyn Joutaro',
         initials: 'JJ',
         firstName: 'Jolyn',
         surName: 'Joutaro',
@@ -26,6 +28,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 3,
+        fullName: 'Souchi Joutaro',
         initials: 'SJ',
         firstName: 'Souchi',
         surName: 'Joutaro',
@@ -34,6 +37,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 4,
+        fullName: 'Jimmy Olsen',
         initials: 'JO',
         firstName: 'Jimmy',
         surName: 'Olsen',
@@ -42,6 +46,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 5,
+        fullName: 'Nico Robin',
         initials: 'NR',
         firstName: 'Nico',
         surName: 'Robin',
@@ -50,6 +55,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 6,
+        fullName: 'Clark Kent',
         initials: 'CK',
         firstName: 'Clark',
         surName: 'Kent',
@@ -58,6 +64,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 7,
+        fullName: 'Diana Prince',
         initials: 'DP',
         firstName: 'Diana',
         surName: 'Prince',
@@ -66,7 +73,8 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 8,
-        initials: 'BN',
+        fullName: 'Buzz Lightyear',
+        initials: 'BL',
         firstName: 'Buzz',
         surName: 'Lightyear',
         gender: 'Male',
@@ -74,6 +82,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 9,
+        fullName: 'Fleaur Delacour',
         initials: 'FD',
         firstName: 'Fleur',
         surName: 'Delacour',
@@ -82,6 +91,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 10,
+        fullName: 'Jun Jie',
         initials: 'JJ',
         firstName: 'Jun',
         surName: 'Jie',
@@ -90,6 +100,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 11,
+        fullName: 'Arthur Curry',
         initials: 'AC',
         firstName: 'Arthur',
         surName: 'Curry',
@@ -98,6 +109,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 12,
+        fullName: 'God Zilla',
         initials: 'GZ',
         firstName: 'God',
         surName: 'Zilla',
@@ -106,6 +118,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 13,
+        fullName: 'Indiana Jones',
         initials: 'IJ',
         firstName: 'Indiana',
         surName: 'Jones',
@@ -114,6 +127,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 14,
+        fullName: 'Kara El',
         initials: 'KE',
         firstName: 'Kara',
         surName: 'El',
@@ -122,6 +136,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 15,
+        fullName: 'Lois Lane',
         initials: 'LL',
         firstName: 'Lois',
         surName: 'Lane',
@@ -130,6 +145,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 16,
+        fullName: 'Mandy Starfire',
         initials: 'MS',
         firstName: 'Mandy',
         surName: 'Starfire',
@@ -138,6 +154,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 17,
+        fullName: 'Orion James',
         initials: 'OJ',
         firstName: 'Orion',
         surName: 'James',
@@ -146,6 +163,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 18,
+        fullName: 'Phenom Jackson',
         initials: 'PJ',
         firstName: 'Phenom',
         surName: 'Jackson',
@@ -154,6 +172,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 19,
+        fullName: 'Rain CLoud',
         initials: 'RC',
         firstName: 'Rain',
         surName: 'Cloud',
@@ -162,6 +181,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 20,
+        fullName: 'Bruce Wayne',
         initials: 'BW',
         firstName: 'Bruce',
         surName: 'Wayne',
@@ -170,6 +190,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 21,
+        fullName: 'Muhammad Hafiz',
         initials: 'MH',
         firstName: 'Muhammad',
         surName: 'Hafiz',
@@ -178,6 +199,7 @@ export const ContactsProvider = (props) => {
       },
       {
         id: 22,
+        fullName: 'Jor El',
         initials: 'JE',
         firstName: 'Jor',
         surName: 'El',

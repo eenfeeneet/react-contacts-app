@@ -39,6 +39,16 @@ export const checkForMatch = (cArray, objKey, input) => {
   return out;
 };
 
+export const sortAscending = (objList, objKey) => {
+  const out = {};
+  const res = matchSorter(objList, '', {
+    keys: [objKey],
+  });
+  out.data = res;
+
+  return out;
+};
+
 // Typecast the variable to Boolean, where str is a variable.
 // It returns false for null,undefined,0,000,"",false.
 // It returns true for string "0" and whitespace " ".

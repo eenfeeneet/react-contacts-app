@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { AddButton } from './Buttons';
 import { AddContactForm } from './Form';
+import { ContactCard } from './Cards';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -44,29 +45,19 @@ export const AddContactModal = () => {
   );
 };
 
-export const ContactCardModal = () => {
+export const ContactCardModal = ({ handleClose, open, data }) => {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const formModal = (
+  const cardModal = (
     <Paper className={classes.paper}>
-      <AddContactForm />
+      <ContactCard data={data} />
     </Paper>
   );
 
   return (
     <React.Fragment>
-      <AddButton handleClick={handleOpen} />
       <Modal open={open} onClose={handleClose}>
-        {formModal}
+        {cardModal}
       </Modal>
     </React.Fragment>
   );

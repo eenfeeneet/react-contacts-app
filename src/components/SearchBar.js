@@ -27,9 +27,9 @@ const SearchBar = () => {
     };
   });
 
-  useEffect(() => {
-    console.log(options);
-  }, [options]);
+  // useEffect(() => {
+  //   console.log(options);
+  // }, [options]);
 
   return (
     <Autocomplete
