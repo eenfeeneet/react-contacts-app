@@ -1,26 +1,23 @@
+import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Contacts from './pages/Contacts';
 
-function App() {
+const useStyles = makeStyles((theme) => ({
+  app: {
+    backgroundColor: theme.palette.primary.light,
+    height: '100%',
+    overflow: 'auto',
+    // margin: '1rem',
+    padding: '1rem',
+  },
+}));
+
+export default function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+      <Contacts />
     </div>
   );
 }
-
-export default App;
